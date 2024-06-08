@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFAF2;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFFAF2;
+  background-size: cover;
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid rgb(84, 84, 84) 1px;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: #FFFAF2;
+}
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  padding: 20px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+div {
+  position: relative;
+  z-index: 0;
+  scroll-margin-top: 80px;
+}
+
+h2 {
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  padding: 4px;
+  border: #545454 solid 2px;
+  z-index: 999;
+  position: relative;
+}
+
+h2::after {
+  display: block;
+  content: "";
+  width: 130px;
+  height: 40px;
+  background: #27a414;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  z-index: 0;
+  transition: all 1s ease;
+  z-index: -1;
+}
+
+span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+}
+
+li {
+  margin-left: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-left: 5px solid #6083DF;
+  padding-left: 10px;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+li:active {
+  transform: scale(0.9);
+}
+
+a[href="#about"] {
+  border-left: 5px solid #27a414;
+}
+
+a[href="#portfolio"] {
+  border-left: 5px solid #FB8800;
+}
+
+p {
+  padding: 20px 40px 20px 40px;
+}
+
+img {
+  max-width: 400px;
+}
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  margin-top: 10%;
+}
+#about h2:hover::after {
+  top: -10px;
+  left: 10px;
+}
+#about img {
+  transform: scaleX(-1);
+  max-width: 30%;
+  margin-right: 10%;
+  transition: all 1s ease-in-out;
+}
+#about img:hover {
+  transform: scale(1.1);
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  margin-top: 10%;
+}
+#portfolio div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 5%;
+}
+#portfolio h2 {
+  width: 220px;
+  height: 40px;
+  padding: 4px;
+  border: #545454 solid 2px;
+  z-index: 1;
+}
+#portfolio h2::after {
+  width: 200px;
+  left: 20%;
+  margin-top: 1em;
+  background-color: #FB8800;
+}
+#portfolio h2:hover::after {
+  top: 1%;
+  left: 50%;
+}
+#portfolio a {
+  border-color: #FB8800;
+  transition: ease-in-out 0.5s;
+}
+#portfolio a:hover {
+  transform: scale(1.1);
+}
+#portfolio img {
+  max-width: 400px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  scroll-snap-align: start;
+  margin-top: 10%;
+}
+#contact h2 {
+  width: 200px;
+  height: 40px;
+  padding: 4px;
+  border: #545454 solid 2px;
+  z-index: 1;
+}
+#contact h2::after {
+  width: 200px;
+  left: 47%;
+  margin-top: 1em;
+  background-color: #6083DF;
+}
+#contact h2:hover::after {
+  top: -10px;
+  left: 43%;
+}
+#contact a {
+  margin-top: 10px;
+}
+#contact p {
+  margin-top: 10px;
+}
+
+.links a {
+  display: block;
+}
+
+.portfolio-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    flex-direction: column;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    margin-top: 20px;
+  }
+  nav ul {
+    margin-top: 10px;
+  }
+  #about {
+    flex-direction: column;
+    margin-top: 30%;
+  }
+  #about img {
+    max-width: 80%;
+    margin: 0;
+  }
+  #portfolio {
+    margin-top: 20%;
+  }
+  #portfolio div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+    text-align: center;
+  }
+  #portfolio img {
+    max-width: 90%;
+  }
+  #contact {
+    margin-top: 20%;
+  }
+  #contact h2::after {
+    left: 40%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
